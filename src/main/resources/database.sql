@@ -67,7 +67,7 @@ CREATE TABLE `pallas` (
 ALTER TABLE `pallas`
   ADD PRIMARY KEY (`id`);
 
---AUTO_INCREMENT de la tabla `pallas`
+-- AUTO_INCREMENT de la tabla `pallas`
 ALTER TABLE `pallas`
   MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
 COMMIT;
@@ -280,6 +280,7 @@ CREATE TABLE `receta` (
 -- Indices de la tabla `calinesculistacompra`
 --
 ALTER TABLE `calinesculistacompra`
+    ADD PRIMARY KEY (`id`);
 -- Indices de la tabla `receta`
 --
 ALTER TABLE `receta`
@@ -298,6 +299,9 @@ ALTER TABLE `calinesculistacompra`
 -- AUTO_INCREMENT de la tabla `receta`
 --
 ALTER TABLE `receta`
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
+
+
 CREATE TABLE `alcalde` (
   `id` bigint NOT NULL,
   `titulo` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
@@ -314,6 +318,7 @@ ALTER TABLE `alcalde`
   ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `alcalde`
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `alfonso_respuesta`
 --
@@ -341,9 +346,11 @@ CREATE TABLE `soares` (
 -- Indices de la tabla `recurso`
 --
 ALTER TABLE `recurso`
+ADD PRIMARY KEY (`id`);
 -- Indices de la tabla `tarea`
 --
 ALTER TABLE `tarea`
+ADD PRIMARY KEY (`id`);
 -- Indices de la tabla `soares`
 --
 ALTER TABLE `soares`
@@ -431,7 +438,7 @@ CREATE TABLE `castanyera` (
   `fecha_modificacion` datetime NOT NULL,
   `publico` tinyint(1) NOT NULL,
   `etiquetas` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf32
+) ENGINE=InnoDB DEFAULT CHARSET=utf32;
 
 --
 -- Índices para tablas volcadas
@@ -457,6 +464,6 @@ ALTER TABLE `garcia`
 COMMIT;
 -- AUTO_INCREMENT de la tabla `castanyera`
 --
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+-- /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+-- /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
