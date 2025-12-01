@@ -112,6 +112,16 @@ ALTER TABLE `alfonso_respuesta`
 ALTER TABLE `blog`
   MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
 
+
+
+-- --------------Ronald------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `frasesmotivacionales`
+--
+
+
+
   CREATE TABLE `calinesculistacompra` (
   `id` bigint NOT NULL,
   `nombre` varchar(255) NOT NULL,
@@ -467,3 +477,49 @@ COMMIT;
 -- /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 -- /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 -- /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+
+-- --------------Ronald------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `frasesmotivacionales`
+--
+
+CREATE TABLE `frasesmotivacionales` (
+  `id` bigint NOT NULL,
+  `frase` varchar(1024) COLLATE utf32_unicode_ci NOT NULL,
+  `autor` varchar(255) COLLATE utf32_unicode_ci NOT NULL DEFAULT 'Anónimo',
+  `es_publica` tinyint(1) NOT NULL,
+  `fecha_creacion` datetime NOT NULL,
+  `fecha_modificacion` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `frasesmotivacionales`
+--
+
+INSERT INTO `frasesmotivacionales` (`id`, `frase`, `autor`, `es_publica`, `fecha_creacion`, `fecha_modificacion`) VALUES
+(1, 'Hola', 'Anónimo', 1, '2025-11-26 11:24:55', NULL);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `frasesmotivacionales`
+--
+ALTER TABLE `frasesmotivacionales`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `frasesmotivacionales`
+--
+ALTER TABLE `frasesmotivacionales`
+
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
