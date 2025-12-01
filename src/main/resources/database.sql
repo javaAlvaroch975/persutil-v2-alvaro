@@ -327,6 +327,39 @@ ALTER TABLE `ideas`
 ALTER TABLE `ideas`
   MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
 COMMIT;
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `castanyera`
+--
+
+CREATE TABLE `castanyera` (
+  `id` bigint NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `titulo` varchar(255) NOT NULL,
+  `contenido` longtext CHARACTER SET utf32 NOT NULL,
+  `fecha_creacion` datetime NOT NULL,
+  `fecha_modificacion` datetime NOT NULL,
+  `publico` tinyint(1) NOT NULL,
+  `etiquetas` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf32
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `castanyera`
+--
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `castanyera`
+--
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
